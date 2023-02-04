@@ -1,0 +1,11 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.ledger.app
+productName: Ledger App
+icon: ./assets/icons/winicon.ico
+target: NSIS
+nsis:
+  allowToChangeInstallationDirectory: true
+  oneClick: false
+electronVersion: 5.0.7

@@ -1,0 +1,25 @@
+{
+    "name": "ledger",
+    "version": "1.1.0",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^5.0.7",
+        "electron-builder": "^21.1.1"
+    },
+    "scripts": {
+        "start": "electron .",
+        "dist": "electron-builder"
+    },
+    "author": "Tamuno Philip <philiptammy11@gmail.com>",
+    "license": "MIT",
+    "build": {
+      "appId": "com.ledger.app",
+      "productName": "Ledger App",
+      "icon": "./assets/icons/winicon.ico",
+      "target": "NSIS",
+      "nsis": {
+        "allowToChangeInstallationDirectory": true,
+        "oneClick": false
+      }
+    }
+}

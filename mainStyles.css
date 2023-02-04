@@ -1,0 +1,614 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Tahoma';
+  box-sizing: border-box;
+}
+
+#container{
+  width: 100%;
+}
+
+#header{
+  background: #090d13;
+  width: 100%;
+  color: #989898;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+/*************logo section*****************/
+.logo-container{
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  width: 300px;
+  border: 1px solid #989898;
+  cursor: pointer;
+}
+
+.logo-container span{
+  display: inline-block;
+  float: left;
+  width: 65px;
+  height: 65px;
+  background: #989898;
+  font-size: 50px;
+  color: #0d1521;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logo-container span img{
+  margin-top: -3px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-container #app-name-container{
+    display: inline-block;
+    float: left;
+    margin: 5px 0 0 15px;
+}
+
+.logo-container #app-name-container #app-name-heading{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo-container #app-name-container #app-name-subheading{
+  letter-spacing: 11px;
+}
+
+
+/*************Date and time section**************/
+#date-time{
+  position: absolute;
+  right: 0;
+  background: #0d1521;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+}
+
+#date-time:before{
+  content:'';
+  display: block;
+  width: 80px;
+  height: 200px;
+  background: #0d1521;
+  transform: rotateZ(20deg);
+  margin-left: -33px;
+}
+
+#date-time ul{
+  list-style: none;
+  border-right: 1px solid #989898;
+  width: 65px;
+  top: 23%;
+  left: 9%;
+  position: absolute;
+}
+
+#date-time ul li{
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#date-time ul li:not(:last-child){
+  margin-bottom: 5px;
+}
+
+#date-time #date-time-value{
+  position: absolute;
+  right: 28%;
+  top: 23%;
+}
+
+#date-time #date-time-value p{
+  font-size: 18px;
+}
+
+#date-time #date-time-value p:not(:last-child){
+  margin-bottom: 5px;
+}
+
+/*************left and right bar div section**************/
+
+/*************left bar div section**************/
+#left-bar-wrapper{
+  width: 50%;
+  background: #0d1521;
+  float: left;
+  height: 590px;
+  overflow: auto;
+}
+
+#left-bar{
+  width: 100%;
+  float: left;
+  background: #0d1521;
+  height: 590px;
+}
+
+/*************customers and ledger tab system section**************/
+#tab-container{
+  width: 90%;
+  margin: 30px auto;
+  background: #090d13;
+  color: #989898;
+}
+
+#tab-btn-container{
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+
+}
+
+#tab-btn-container button{
+  box-sizing: border-box;
+  color: #989898;
+  border: none;
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #23282e;
+  transition: background 0.7s;
+}
+
+#tab-btn-container button.btn-background{
+  background: #090d13;
+}
+
+#tab-btn-container button:focus{
+  outline: none;
+}
+
+#customer-tab-btn{
+  float: left;
+}
+
+#ledger-tab-btn{
+  float: right;
+}
+
+/*************customers section**************/
+#customers-container{
+  margin-top: 5px;
+}
+
+#customers-container .tab-btn{
+  border: none;
+  background: #989898;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px 0 10px 20px;
+  cursor: pointer;
+  color: #0d1521;
+  transition: background 0.7s;
+}
+
+#customers-container .tab-btn:focus{
+  outline: none;
+}
+
+#customers-container #view-customer-btn{
+  margin-bottom: 30px;
+}
+
+#customer-error-success-msg{
+  margin-left: 25px;
+}
+
+#customers-container .tab-btn:hover{
+  background: #fff;
+}
+
+.customers-form{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.customers-form form{
+  width: 90%;
+  margin: 0px auto;
+  height: 0px;
+  transition: height 0.7s;
+  overflow: hidden;
+}
+
+.customers-form form p{
+  margin-bottom: 10px;
+}
+
+.customers-form form input{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background: #181c22;
+  color: #989898;
+}
+
+.customers-form form button{
+  width: 70px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  background: #23282e;
+  color: #fff;
+}
+
+.customers-form form #customer-update-btn{
+  display: none;
+}
+/******************************ledger section*****************************/
+#ledger-container{
+  margin-top: 5px;
+}
+
+#ledger-container .tab-btn{
+  border: none;
+  background: #989898;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px 0 10px 20px;
+  cursor: pointer;
+  color: #0d1521;
+  transition: background 0.7s;
+}
+
+#ledger-container .tab-btn:focus{
+  outline: none;
+}
+
+#ledger-container #view-ledger-btn{
+  margin-bottom: 30px;
+}
+
+#ledger-error-success-msg{
+  margin-left: 25px;
+}
+
+#ledger-container .tab-btn:hover{
+  background: #fff;
+}
+
+.ledger-form{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ledger-form form{
+  width: 90%;
+  margin: 0 auto;
+  height: 0px;
+  transition: height 0.7s;
+  overflow: hidden;
+}
+
+.ledger-form form p{
+  margin-bottom: 10px;
+}
+
+.ledger-form form input{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background: #181c22;
+  color: #989898;
+}
+
+.ledger-form form textarea{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background: #181c22;
+  color: #989898;
+  height: 100px;
+}
+
+.ledger-form form button{
+  width: 70px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #23282e;
+  color: #fff;
+  float: right;
+}
+#ledger-update-btn{
+  display: none;
+}
+
+#view-ledger-btn{
+  margin-bottom: 20px;
+}
+
+/*******************right bar div section***********************/
+#right-bar{
+  width: 50%;
+  float: right;
+  background: #dbe3f0;
+  height: 590px;
+  overflow: auto;
+}
+
+#default-view{
+  position: relative;
+  top: 30px;
+}
+
+#default-view #default-view-text-container{
+  border-top: 1px solid #0d1521;
+  border-bottom: 1px solid #0d1521;
+  text-align: center;
+  padding: 20px 0 25px 0;
+}
+
+#default-view-heading{
+  font-size: 32.5px;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #0d1521;
+  margin-bottom: 10px;
+}
+
+.default-view-text{
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #0d1521;
+  letter-spacing: 3px;
+}
+
+#customer-view{
+  background: #dbe3f0;
+}
+
+#customer-view p{
+  font-size: 20px;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #0d1521;
+  margin: 22px;
+}
+
+/**************************customers table style**************************/
+#customer-view #display-customer-table{
+  margin: 0 auto;
+  width: 90%;
+}
+
+#customer-view #display-customer-table #empty-customer-list{
+  font-size: 50px;
+  letter-spacing: 5px;
+  color: #5b82be;
+}
+
+#customers-table{
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border-collapse: collapse;
+  color: #0d1521;
+  word-break: break-all;
+  font-size: 10px;
+}
+
+#customers-table #customers-table-heading{
+  background: #b6c8e2;
+}
+
+#customers-table tr{
+  background: #dbe3f0;
+  transition: background 0.7s;
+}
+
+#customers-table tr.odd{
+  background: #b6c8e2;
+}
+
+#customers-table tr.even:hover{
+  background: #6d90c5;
+}
+
+#customers-table tr.odd:hover{
+  background: #6d90c5;
+}
+
+#customers-table td{
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#customers-table th{
+  padding: 15px 0;
+}
+
+#customers-table .edit-delete-cell{
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#customers-table #edit-customer-btn{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #6d90c5;
+  color: #0d1521;
+  border: none;
+  outline: none;
+  transition: background 0.7s, color 0.7s;
+}
+
+#customers-table #edit-customer-btn:hover{
+  background: #335280;
+  color: #fff;
+}
+
+#customers-table #delete-customer-btn{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #6d90c5;
+  color: #0d1521;
+  border: none;
+  transition: background 0.7s, color 0.7s;
+}
+
+#customers-table #delete-customer-btn:hover{
+  background: #990000;
+  color: #fff;
+}
+
+/****************************ledger table style***************************/
+
+#ledger-view #display-ledger-table{
+  margin: 0 auto 50px auto;
+  width: 90%;
+}
+
+#ledger-view #display-ledger-table #empty-ledger-list{
+  font-size: 50px;
+  letter-spacing: 5px;
+  color: #5b82be;
+}
+
+#ledgers-table{
+  width: 100%;
+  outline: none;
+  padding: 10px;
+  border-collapse: collapse;
+  color: #0d1521;
+  word-break: break-all;
+  font-size: 10px;
+}
+
+#ledgers-table #ledgers-table-heading{
+  background: #b6c8e2;
+}
+
+#ledgers-table tr{
+  background: #dbe3f0;
+  transition: background 0.7s;
+}
+
+#ledgers-table tr.odd{
+  background: #b6c8e2;
+}
+
+#ledgers-table tr.even:hover{
+  background: #6d90c5;
+}
+
+#ledgers-table tr.odd:hover{
+  background: #6d90c5;
+}
+
+#ledgers-table td{
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#ledgers-table th{
+  padding: 15px 0;
+}
+
+#ledgers-table tfoot{
+  font-weight: bold;
+}
+
+#ledgers-table .ledger-balance-amount{
+  font-weight: bold;
+}
+
+#ledgers-table .edit-delete-cell{
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#ledgers-table #edit-ledger-btn{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #6d90c5;
+  color: #0d1521;
+  border: none;
+  outline: none;
+  transition: background 0.7s, color 0.7s;
+}
+
+#ledgers-table #edit-ledger-btn:hover{
+  background: #335280;
+  color: #fff;
+}
+
+#ledgers-table #delete-ledger-btn{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: #6d90c5;
+  color: #0d1521;
+  border: none;
+  transition: background 0.7s, color 0.7s;
+}
+
+#ledgers-table #delete-ledger-btn:hover{
+  background: #990000;
+  color: #fff;
+}
+
+/****************************closing ledger table style***************************/
+#ledger-view{
+  position: relative;
+}
+
+#ledger-view p{
+  font-size: 20px;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #0d1521;
+  margin: 22px;
+}
+
+#ledger-view #display-range{
+  display: inline-block;
+  height: 30px;
+  font-size: 15px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: #0d1521;
+  border-color: #6d90c5;
+  border-radius: 2px;
+}

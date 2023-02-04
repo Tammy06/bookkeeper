@@ -1,0 +1,19 @@
+@media only screen and (max-width: 682px){
+  .logo-container #app-name-container{
+      display: none;
+  }
+
+  .logo-container{
+    width: 66px;
+  }
+}
+
+@media only screen and (max-width: 820px){
+  #customer-view #display-customer-table #empty-customer-list{
+    font-size: 25px;
+  }
+
+  #ledger-view #display-ledger-table #empty-ledger-list{
+    font-size: 25px;
+  }
+}

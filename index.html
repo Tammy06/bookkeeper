@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="mainStyles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <title>Book Keeper</title>
+</head>
+<body>
+  <!--page wrapper-->
+  <div id="container">
+    <!------------page header div-------------->
+    <div id="header">
+      <div class="logo-container" onclick="showViews('default-view')">
+        <span>B</span>
+        <div id="app-name-container">
+          <p id="app-name-heading">Book keeper</p>
+          <p id="app-name-subheading">Ledger</p>
+        </div>
+      </div>
+
+      <!--header date and time div-->
+      <div id="date-time">
+        <ul>
+          <li>date</li>
+          <li>time</li>
+        </ul>
+        <div id="date-time-value">
+          <p id="date">6|07|2019</p>
+          <p id="time">10:55am</p>
+        </div>
+      </div>
+
+    </div>
+    <!---------//closing page header div----------->
+
+    <!-------page left and right bar div------->
+
+    <!-------left bar wrapper div------->
+    <div id="left-bar-wrapper">
+
+      <!--left bar div-->
+      <div id="left-bar">
+
+        <!--tab container div-->
+        <div id="tab-container">
+
+          <!--tab button container-->
+          <div id="tab-btn-container">
+            <button class="customer-ledger-btn btn-background" id="customer-tab-btn" onclick="showTab('customer-tab-btn', 'customers-container')">client</button>
+            <button class="customer-ledger-btn btn-background" id="ledger-tab-btn" onclick="showTab('ledger-tab-btn', 'ledger-container')">ledger</button>
+          </div>
+
+          <!--customers container div-->
+          <div class="tab" id="customers-container">
+            <div class="customers-form">
+              <button class="tab-btn" id="add-customer-btn">Add Client</button>
+              <form id="customer-form">
+                <p>Name</p>
+                <input type="text" id="name" placeholder="Type here...">
+                <p>phone No</p>
+                <input type="Number" id="phone-num">
+                <p>Email<p>
+                <input type="text" id="email">
+                <p>Address</p>
+                <input type="text" id="address">
+                <button type="submit" id="customer-add-btn">Add</button>
+                <button id="customer-update-btn">Update</button>
+              </form>
+              <div id="customer-error-success-msg"></div>
+              <button class="tab-btn" id="view-customer-btn" onclick="showViews('customer-view')">View Clients</button>
+            </div>
+          </div>
+
+          <!--ledge container div-->
+          <div class="tab" id="ledger-container">
+            <div class="ledger-form">
+              <button class="tab-btn" id="add-ledger-btn">Add Ledger</button>
+              <form id="ledger-form">
+                <p>Credit Amount (CASH)</p>
+                <input type="Number" class="ledger-data" id="credit-cash" placeholder="Type here...">
+                <p>Debit Amount (CASH)</p>
+                <input type="Number" class="ledger-data" id="debit-cash">
+                <p>Credit Amount (ACCOUNT)<p>
+                <input type="Number" class="ledger-data" id="credit-account">
+                <p>Debit Amount (ACCOUNT)</p>
+                <input type="Number" class="ledger-data" id="debit-account">
+                <p>Description</p>
+                <textarea name="" id="ledger-description" cols="30" rows="10"></textarea>
+                <button type="submit" id="ledger-add-btn">Add</button>
+                <button id="ledger-update-btn">Update</button>
+              </form>
+              <div id="ledger-error-success-msg"></div>
+              <button class="tab-btn" id="view-ledger-btn" onclick="showViews('ledger-view')">View Ledger</button>
+            </div>
+          </div>
+
+        </div>
+        <!---------//closing tab container div----------->
+      </div>
+      <!---------//closing left bar div----------->
+    </div>
+    <!-------// closing left bar wrapper div------->
+
+
+    <!-------------------right bar div------------------>
+    <div id="right-bar">
+
+      <!--Default view wrapper/container div-->
+      <div class="views" id="default-view">
+        <div id="default-view-text-container">
+          <p id="default-view-heading">balance sheet</p>
+          <p class="default-view-text">ledger and client's database</p>
+        </div>
+      </div>
+
+      <!--Customer view wrapper/container div-->
+      <div class="views" id="customer-view">
+        <p>customers table</p>
+
+        <div id="display-customer-table">
+
+        </div>
+      </div>
+
+      <!--ledger view display wrapper/container div-->
+      <div class="views" id="ledger-view">
+        <p>ledger table</p>
+        <select name="" id="display-range">
+
+        </select>
+
+        <div id="display-ledger-table">
+
+        </div>
+      </div>
+
+    </div>
+    <!---------//closing right bar div----------->
+
+  </div>
+  <!---------//closing page wrapper div----------->
+
+  <script src="./script.js"></script>
+  <script src="./customer-controllers.js"></script>
+  <script src="./ledger-controllers.js"></script>
+</body>
+</html>
