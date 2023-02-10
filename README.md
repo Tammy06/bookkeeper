@@ -7,4 +7,4 @@ Executable file location: ./dist/Ledger App Setup 1.1.0.exe
 - npm install
 
 # tools
-Electron.js
+- Electron.js
